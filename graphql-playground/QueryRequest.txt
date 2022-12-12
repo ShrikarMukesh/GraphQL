@@ -1,4 +1,4 @@
-sayHello
+  sayHello
   sayHelloTo(name: "Jonath")
 
   1) Query
@@ -27,8 +27,19 @@ sayHello
   }
 
   4) Query
-
   customers {
     id
     city
   }
+
+  =========>
+  5) Query
+  customers {
+     id,
+     name,
+     age,
+     orders(limit: 1){
+         id
+         description
+     }
+   }
