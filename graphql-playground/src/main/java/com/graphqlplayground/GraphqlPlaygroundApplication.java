@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
 
-@SpringBootApplication(scanBasePackages = "com.graphqlplayground.lec05")
+@SpringBootApplication(scanBasePackages = "com.graphqlplayground.lec03")
 @EnableR2dbcRepositories(basePackages = "com.graphqlplayground.${lec}")
 public class GraphqlPlaygroundApplication {
 

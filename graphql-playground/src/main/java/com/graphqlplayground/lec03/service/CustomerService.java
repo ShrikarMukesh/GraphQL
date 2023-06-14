@@ -7,7 +7,7 @@ import reactor.core.publisher.Flux;
 @Service
 public class CustomerService {
 
-    private final Flux<Customer> flux = Flux.just(
+    private final Flux<Customer> customers = Flux.just(
             Customer.create(1, "sam", 20, "atlanta"),
             Customer.create(2, "jake", 10, "las vegas"),
             Customer.create(3, "mike", 15, "miami"),
@@ -15,7 +15,7 @@ public class CustomerService {
     );
 
     public Flux<Customer> allCustomers(){
-        return flux;
+        return customers;
     }
 
 }
