@@ -1,0 +1,19 @@
+query {
+    authors {
+        id
+        name
+        email
+        posts{
+            id
+            title
+        }
+    }
+}
+---------------------------------------------
+query{
+  recentPosts(count:3, offset:0){
+    id
+    title
+  }
+}
+------------------------------------
