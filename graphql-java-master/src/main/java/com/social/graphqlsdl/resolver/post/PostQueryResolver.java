@@ -7,8 +7,11 @@ import graphql.kickstart.tools.GraphQLQueryResolver;
 import graphql.schema.DataFetchingEnvironment;
 import graphql.schema.SelectedField;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
 
+import java.awt.print.Pageable;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -24,6 +27,7 @@ public class PostQueryResolver implements GraphQLQueryResolver {
     }
 
     public List<PostDto> recentPosts(int count, int offset, DataFetchingEnvironment environment){
+
         CustomGraphQLContext context = environment.getContext();
 
         log.info("user id {}", context.getUserId());

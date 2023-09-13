@@ -25,7 +25,6 @@ public class AuthorFieldResolver implements GraphQLResolver<AuthorDto> {
         return postService.getAllPostByAuthorId(authorDto.getId());
     }
 
-
     public Integer postCount(AuthorDto authorDto) {
         return postService.getPostCountByAuthorId(authorDto.getId());
     }

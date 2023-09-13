@@ -25,6 +25,7 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public List<AuthorDto> getAuthors() {
+
         List<Author> all = authorRepository.findAll();
         return all.stream()
                 .map(author -> {
